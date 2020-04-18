@@ -19,6 +19,9 @@ bool isPermutation1(string s1, string s2) {
     return false;
 }
 bool isPermutation2(string s1, string s2) {
+    if(s1.length() != s2.length())
+        return false;
+        
     int letters[127];
     for(int i=0; i<s1.length(); i++) {
         int c = s1[i] - 48;
