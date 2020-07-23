@@ -57,6 +57,18 @@ void removeDuplicatesWithoutBuffer(Node* n) {
   }
 }
 
+void removeDuplicatesWithoutBuffer2(Node* n) {
+  Node* new_head = n;
+  while(n != NULL) {
+    while(n->next != NULL) {
+      if (n->next->data == n->data)
+          n->next = n->next->next;
+      else n = n->next;
+    }
+    n = n->next;
+  }
+}
+
 int main(int argc, const char * argv[]) {
     addValue(2);
     addValue(3);
